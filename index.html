@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Protein Folding Simulations</title>
+
+    <link href="static/bootstrap.min.css" rel="stylesheet">
+    <link href="static/blog.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="blog-header">
+        <h1 class="blog-title">Protein Folding Simulations</h1>
+        <p class="lead blog-description">Joseph Arhar, BMED 213, 2018-06-03</p>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-8 blog-main">
+          <div class="blog-post">
+
+            <h2>How do proteins get folded?</h2>
+            <p>As we learned in Dr. Babu's class, proteins must be folded in
+            order to fulfill their intended function. However, protein folding
+            is a very complicated process. Proteins get folded almost randomly
+            in the cell by bumping into water molecules and other foces until
+            they take on their final shape and can be used. This animated
+            simulation of a protein folding shows how the folding process
+            happens "randomly" over time:</p>
+            <div class="row">
+              <div class="col-xs-4 col-md-6">
+                <a class="thumbnail" href="http://www0.cs.ucl.ac.uk/staff/d.jones/t42morph.html">
+                  <img src="static/T42morphs.gif" />
+                  <p style="font-size:11px">http://www0.cs.ucl.ac.uk/staff/d.jones/t42morph.html</p>
+                </a>
+              </div>
+              <div class="col-xs-4 col-md-6">
+                <a class="thumbnail" href="http://www0.cs.ucl.ac.uk/staff/d.jones/t42morph.html">
+                  <img src="static/T281morphs.gif" />
+                  <p style="font-size:11px">http://www0.cs.ucl.ac.uk/staff/d.jones/t42morph.html</p>
+                </a>
+              </div>
+            </div>
+
+            <h2>How can we simulate folding?</h2>
+            <p>Since protein folding occurs in so many randomized intermediate
+            steps, simulations must take this into account by modeling many
+            possible intermediate shapes between the initial and final state of
+            the protein:</p>
+            <div class="col-xs-4 col-md-12">
+              <a href="https://en.wikipedia.org/wiki/File:ACBP_MSM_from_Folding@home.tiff" class="thumbnail">
+                <img src="static/tree.png" />
+                <p style="font-size:11px">https://en.wikipedia.org/wiki/File:ACBP_MSM_from_Folding@home.tiff</p>
+              </a>
+            </div>
+            <p>This video shows how we can use hints from amino acid properties to help constrain our model:</p>
+            <div class="col-xs-4 col-md-12">
+              <a class="thumbnail">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/cAJQbSLlonI?start=101"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              </a>
+            </div>
+            <p>With the combined strategies of considering different steps and
+            applying constraints, we can make accurate predictions of how a
+            protein will fold.</p>
+
+            <h2>What can folding simulations tell us?</h2>
+            <p>As "The protein folding revolution" video says, understanding
+            protein folding enables us to design new proteins to be used for
+            delivering drugs, creating new materials, and more. In addition to
+            designing new proteins, we can also get more information about
+            protein misfolding and associated diseases, including sickle-cell
+            anemia, type II diabetes, and cystic fibrosis.</p>
+
+            <h2>How can we get enough compute power?</h2>
+            <p>Running these simulations is very computationally expensive and
+            cannot be done efficiently on one computer. However, the problem
+            can be split into multiple pieces which can be simulated on
+            multiple computers at the same time. However, several powerful
+            computers is still not powerful enough to run large scale research
+            projects. This is where crowd-sourced solutions come in: you can
+            donate cpu power to run folding simulations for research!</p>
+
+            <h3>Folding@home</h3>
+            <p><a href="https://foldingathome.org/">Folding@home</a> is a
+            distributed computing project for disease research that simulates
+            protein folding, computational drug design, and other types of
+            molecular dynamics. It is based in Stanford University at the Pande
+            Labratory and has been running since October 1, 2000. It relies on
+            donated CPU power, and anyone can contribute. Since the beginning,
+            they have released papers based on crowdsourced data on
+            antibiotics, Alzheimer's, Parkinson's, Huntington's, 
+            <a href="https://foldingathome.org/project-timeline/">and more</a>.
+            Folding@home has a 
+            <a href="https://foldingathome.org/start-folding/">desktop app</a> 
+            which you can install, and if you're using Google Chrome, you can
+            contribute without even installing the app 
+            <a href="http://nacl.foldingathome.org/">here</a>.
+
+            <h3>Rosetta@home</h3>
+            <a href="http://boinc.bakerlab.org/rosetta/">Rosetta@home</a> is
+            a project similar to Folding@home, but is run by the University of
+            Washington. Results from Rosetta@home calculations have been used
+            to model proteins in herpes simplex virus 1, design possible
+            vaccines for HIV, and design proteins to fight against malaria.</p>
+
+          </div> <!-- /.blog-post -->
+        </div> <!-- /.blog-main -->
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+
+    <script src="static/jquery.min.js"></script>
+    <script src="static/bootstrap.min.js"></script>
+  </body>
+</html>
